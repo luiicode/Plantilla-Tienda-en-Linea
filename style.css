@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #ffffff;
+    --menu: #F8F8F8;
+    --footer: #c8c8c8;
+    --text: #333333;
+    --titles: #A7D9D5;
+    --navegatelink: #C08497;
+    --borders: #E0E0E0;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+    gap: 50px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    justify-content: center;
+    background: var(--menu);
+}
+
+.head img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.btn-menu {
+    width: 40px;
+    height: 40px;
+    margin: 20px 0px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+    height: 60px;
+    margin: 10px 0px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0px;
+    height: 30px;
+}
+
+.menu span {
+    text-align: center;
+    color: var(--text);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-home, .icon-galeria, .icon-nosotros, .icon-FAQ, .icon-contacto {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center;
+    display: inline-block;
+}
+
+.icon-home {
+    background-image: url(img/hogar.svg);
+}
+
+.icon-galeria {
+    background-image: url(img/moda.png);
+}
+
+.icon-nosotros {
+    background-image: url(img/publico-objetivo.png);
+}
+
+.icon-FAQ {
+    background-image: url(img/pregunta.png);
+}
+
+.icon-contacto {
+    background-image: url(img/telefono.png);
+}
+
+.carrito {
+    width: 40px;
+    height: 40px;
+    margin: 20px 0px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cuenta {
+    width: 40px;
+    height: 40px;
+    margin: 20px 0px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.contenido {
+    padding: 120px 20px 20px 20px;
+    background: var(--main);
+    height: auto;
+    overflow-x: hidden;
+}
+
+.contenido img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: var(--titles);
+    margin-bottom: 20px;
+}
+
+.carrusel {
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.wrap {
+    display: inline-block;
+    animation: translate 30s linear infinite;
+}
+
+.wrap img {
+    height: 300px;
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes translate {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+.offer-part {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--titles);
+    margin: 20px 0px;
+}
+
+.offer {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 1000px;
+    margin: 20px 10px;
+    padding: 20px;
+    justify-self: center;
+    justify-items: center;
+    border: 5px solid var(--borders);
+    border-radius: 20px;
+}
+
+.offer-1, .offer-2, .offer-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    border: 3px solid var(--navegatelink);
+    border-radius: 10px;
+    font-size: larger;
+    color: var(--text);
+}
+
+.offer-1 button, .offer-2 button, .offer-3 button {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: none;
+    background: var(--navegatelink);
+    border-radius: 10px;
+    font-size: medium;
+    text-align: center;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.offer-1 button:hover, .offer-2 button:hover, .offer-3 button:hover {
+    background: var(--titles);
+    color: #ffffff;
+    transition: 1s;
+}
+
+.offer-1 img {
+    width: auto;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.offer-2 img, .offer-3 img {
+    height: 150px;
+    width: 225px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.products-part {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--titles);
+    margin: 40px 0px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    width: 1300px;
+    margin: 20px 10px;
+    padding: 20px;
+    justify-self: center;
+    justify-items: center;
+    border: 5px solid var(--borders);
+    border-radius: 20px;
+}
+
+.product-1, .product-2, .product-3, .product-4, .product-5, .product-6  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    border: 3px solid var(--navegatelink);
+    border-radius: 10px;
+    font-size: larger;
+    color: var(--text);
+}
+
+.product-7, .product-8, .product-9 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    border: 3px solid var(--navegatelink);
+    border-radius: 10px;
+    font-size: larger;
+    color: var(--text);
+}
+
+.product-1 button, .product-2 button, .product-3 button, .product-4 button, .product-5 button, .product-6 button, .product-7 button, .product-8 button, .product-9 button {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: none;
+    background: var(--navegatelink);
+    border-radius: 10px;
+    font-size: medium;
+    text-align: center;
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.product-1 button:hover, .product-2 button:hover, .product-3 button:hover, .product-4 button:hover, .product-5 button:hover, .product-6 button:hover, .product-7 button:hover, .product-8 button:hover, .product-9 button:hover {
+    background: var(--titles);
+    color: #ffffff;
+    transition: 1s;
+}
+
+.product-3 img, .product-7 img {
+    width: auto;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.product-1 img, .product-2 img, .product-4 img, .product-5 img, .product-6 img, .product-8 img, .product-9 img {
+    height: 150px;
+    width: 225px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.credits {
+    background: var(--footer);
+    padding: 20px;
+    text-align: center;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+}
